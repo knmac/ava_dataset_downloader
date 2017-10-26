@@ -1,0 +1,6 @@
+*.swp
+*.csv
+*.lst
+videos/
+train/
+test/
