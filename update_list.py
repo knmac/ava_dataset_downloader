@@ -21,7 +21,7 @@ def save_list(vid_list, path):
             f.write(vid + '\n')
             
 if __name__ == '__main__':
-    train_vid_list = load_list(sys.argv[2])
-    already_downloaded_train_vid_list = load_downloaded_videos(sys.argv[1])
-    save_list(train_vid_list - already_downloaded_train_vid_list, sys.argv[2])
+    vid_list = load_list(sys.argv[2])
+    already_downloaded_vid_list = load_downloaded_videos(sys.argv[1])
+    save_list(vid_list - already_downloaded_vid_list, sys.argv[2])
 
