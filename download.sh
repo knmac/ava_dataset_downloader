@@ -26,6 +26,10 @@ fi
 python makelist.py ${TRAIN_FN} ${TRAIN_VID_LST}
 python makelist.py ${TEST_FN} ${TEST_VID_LST}
 
+# exclude already downloaded
+python update_list.py 'train' ${TRAIN_VID_LST}
+python update_list.py 'test' ${TEST_VID_LST}
+
 # download videos
 youtube-dl -ci –format mp4 -o 'train/%(id)s.%(ext)s' -a ${TRAIN_VID_LST}
 youtube-dl -ci –format mp4 -o 'test/%(id)s.%(ext)s' -a ${TEST_VID_LST}
